@@ -34,3 +34,20 @@ Examine the `check_password` function:
 44ae:  0f4e           mov	r14, r15
 44b0:  3041           ret
 ```
+
+Combine all the hex characters:
+```
+5d51 5660 7c4a 6568
+```
+
+Track the r15 register:
+```
+track 15
+```
+
+Remember that MPS430 is little-endian. The bytes are read from right to left. This requires the input to be flipped:
+```
+515d 6056 4a7c 6865
+```
+
+Solve. Done
